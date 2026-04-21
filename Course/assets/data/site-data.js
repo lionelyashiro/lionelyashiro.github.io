@@ -1,0 +1,189 @@
+window.__SITE_DATA__ = {
+  "digest": {
+    "generated_at": "2026-04-17T05:51:09.354703+00:00",
+    "lead": {
+      "source_name": "Fox News",
+      "source_id": "fox",
+      "source_url": "https://www.foxnews.com/about/rss",
+      "title": "Trump admin announces expansion of visa restriction policy in Western Hemisphere",
+      "url": "https://www.foxnews.com/politics/trump-admin-announces-expansion-visa-restriction-policy-western-hemisphere",
+      "summary": "The State Department said it imposed visa restrictions on 26 individuals under the expanded policy targeting those acting for U.S. adversaries.",
+      "published_at": "2026-04-17T02:31:32+00:00"
+    },
+    "sources": [
+      {
+        "id": "bbc",
+        "name": "BBC",
+        "kind": "rss",
+        "status": "ok",
+        "source_url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/business/rss.xml",
+        "items": [
+          {
+            "title": "Finance ministers and top bankers raise serious concerns about Mythos AI model",
+            "url": "https://www.bbc.com/news/articles/c2ev24yx4rmo?at_medium=RSS&at_campaign=rss",
+            "summary": "Experts say Mythos potentially has an unprecedented ability to identify and exploit cybersecurity weaknesses.",
+            "published_at": "2026-04-17T01:34:22+00:00"
+          },
+          {
+            "title": "Rising value of Pok\u00e9mon cards sparks smash and grab crime spree",
+            "url": "https://www.bbc.com/news/articles/c4gvvnpl5kno?at_medium=RSS&at_campaign=rss",
+            "summary": "Small shops across the UK are being targeted by thieves stealing collectibles worth thousands of pounds.",
+            "published_at": "2026-04-16T23:01:59+00:00"
+          },
+          {
+            "title": "Netflix co-founder Reed Hastings to step down as chairman",
+            "url": "https://www.bbc.com/news/articles/cvglzn9e82eo?at_medium=RSS&at_campaign=rss",
+            "summary": "Hastings set up the company in 1997, when it rented DVDs to customers and delivered by post.",
+            "published_at": "2026-04-16T21:59:56+00:00"
+          },
+          {
+            "title": "No issues with UK fuel supply, says Reeves",
+            "url": "https://www.bbc.com/news/articles/c5y97jjnqzyo?at_medium=RSS&at_campaign=rss",
+            "summary": "The chancellor was speaking at the end of the International Monetary Fund meeting in Washington.",
+            "published_at": "2026-04-16T17:05:32+00:00"
+          },
+          {
+            "title": "Europe has 'maybe six weeks of jet fuel left', energy boss warns",
+            "url": "https://www.bbc.com/news/articles/czjw2kz0l22o?at_medium=RSS&at_campaign=rss",
+            "summary": "Flights could soon be cancelled if supplies from the Gulf remain blocked, says the International Energy Agency.",
+            "published_at": "2026-04-16T19:19:07+00:00"
+          }
+        ],
+        "note": "BBC business headlines via official RSS. BBC terms require nearby credit and links back to BBC News."
+      },
+      {
+        "id": "fox",
+        "name": "Fox News",
+        "kind": "rss",
+        "status": "ok",
+        "source_url": "https://www.foxnews.com/about/rss",
+        "items": [
+          {
+            "title": "Trump admin announces expansion of visa restriction policy in Western Hemisphere",
+            "url": "https://www.foxnews.com/politics/trump-admin-announces-expansion-visa-restriction-policy-western-hemisphere",
+            "summary": "The State Department said it imposed visa restrictions on 26 individuals under the expanded policy targeting those acting for U.S. adversaries.",
+            "published_at": "2026-04-17T02:31:32+00:00"
+          },
+          {
+            "title": "Singer D4vd arrested and held without bail in case tied to teen found dead in Tesla: Police",
+            "url": "https://www.foxnews.com/us/singer-d4vd-arrested-held-bail-case-tied-teen-found-dead-tesla-police",
+            "summary": "Singer D4vd, whose real name is David Burke, was arrested in connection with the murder of 14-year-old Celeste Rivas Hernandez in LA, LAPD says.",
+            "published_at": "2026-04-17T01:55:21+00:00"
+          },
+          {
+            "title": "EXCLUSIVE: NYC officials refuse ICE hold for illegal alien accused in arson that killed 4 and injured 7: DHS",
+            "url": "https://www.foxnews.com/us/exclusive-nyc-officials-refuse-ice-hold-illegal-alien-accused-arson-killed-4-injured-7-dhs",
+            "summary": "A Mexican national illegal alien accused of randomly setting a NYC apartment on fire that killed four could be released due to the city&apos;s sanctuary policies, DHS sa\u2026",
+            "published_at": "2026-04-17T01:50:23+00:00"
+          },
+          {
+            "title": "Former SMU cornerback Teddy Knox faces $2.88M judgment for crash linked to Rashee Rice's Lamborghini race",
+            "url": "https://www.foxnews.com/sports/former-smu-cornerback-teddy-knox-faces-288m-judgment-crash-tied-rashee-rices-lamborghini-race",
+            "summary": "Teddy Knox, who was racing Rashee Rice&apos;s Lamborghini in a 2024 Dallas crash, was ordered to pay $2.88 million in a default judgment lawsuit.",
+            "published_at": "2026-04-17T01:41:55+00:00"
+          },
+          {
+            "title": "Miami Catholic Charities loses $11M contract providing care for migrant children under Trump administration",
+            "url": "https://www.foxnews.com/media/miami-catholic-charities-loses-11m-contract-providing-care-migrant-children-under-trump-admin",
+            "summary": "The Trump administration canceled an $11 million Catholic Charities contract in Miami, citing a drop in illegal immigration and fewer unaccompanied minors.",
+            "published_at": "2026-04-17T01:30:45+00:00"
+          }
+        ],
+        "note": "Fox News headlines via official RSS. Fox terms require attribution and direct links to full articles."
+      }
+    ],
+    "meta": {
+      "title": "Daily Digest",
+      "description": "Compiled headlines for classroom discussion from BBC and Fox News."
+    }
+  },
+  "foxSnapshot": {
+    "generated_at": "2026-04-17T05:51:09.354703+00:00",
+    "source": {
+      "id": "fox",
+      "name": "Fox News",
+      "kind": "rss",
+      "status": "ok",
+      "source_url": "https://www.foxnews.com/about/rss",
+      "note": "Fox News headlines via official RSS. Fox terms require attribution and direct links to full articles."
+    },
+    "items": [
+      {
+        "title": "Trump admin announces expansion of visa restriction policy in Western Hemisphere",
+        "url": "https://www.foxnews.com/politics/trump-admin-announces-expansion-visa-restriction-policy-western-hemisphere",
+        "summary": "The State Department said it imposed visa restrictions on 26 individuals under the expanded policy targeting those acting for U.S. adversaries.",
+        "published_at": "2026-04-17T02:31:32+00:00"
+      },
+      {
+        "title": "Singer D4vd arrested and held without bail in case tied to teen found dead in Tesla: Police",
+        "url": "https://www.foxnews.com/us/singer-d4vd-arrested-held-bail-case-tied-teen-found-dead-tesla-police",
+        "summary": "Singer D4vd, whose real name is David Burke, was arrested in connection with the murder of 14-year-old Celeste Rivas Hernandez in LA, LAPD says.",
+        "published_at": "2026-04-17T01:55:21+00:00"
+      },
+      {
+        "title": "EXCLUSIVE: NYC officials refuse ICE hold for illegal alien accused in arson that killed 4 and injured 7: DHS",
+        "url": "https://www.foxnews.com/us/exclusive-nyc-officials-refuse-ice-hold-illegal-alien-accused-arson-killed-4-injured-7-dhs",
+        "summary": "A Mexican national illegal alien accused of randomly setting a NYC apartment on fire that killed four could be released due to the city&apos;s sanctuary policies, DHS sa\u2026",
+        "published_at": "2026-04-17T01:50:23+00:00"
+      },
+      {
+        "title": "Former SMU cornerback Teddy Knox faces $2.88M judgment for crash linked to Rashee Rice's Lamborghini race",
+        "url": "https://www.foxnews.com/sports/former-smu-cornerback-teddy-knox-faces-288m-judgment-crash-tied-rashee-rices-lamborghini-race",
+        "summary": "Teddy Knox, who was racing Rashee Rice&apos;s Lamborghini in a 2024 Dallas crash, was ordered to pay $2.88 million in a default judgment lawsuit.",
+        "published_at": "2026-04-17T01:41:55+00:00"
+      },
+      {
+        "title": "Miami Catholic Charities loses $11M contract providing care for migrant children under Trump administration",
+        "url": "https://www.foxnews.com/media/miami-catholic-charities-loses-11m-contract-providing-care-migrant-children-under-trump-admin",
+        "summary": "The Trump administration canceled an $11 million Catholic Charities contract in Miami, citing a drop in illegal immigration and fewer unaccompanied minors.",
+        "published_at": "2026-04-17T01:30:45+00:00"
+      }
+    ],
+    "meta": {
+      "title": "Fox News Snapshot",
+      "description": "Saved Fox News stories for display on the local static website."
+    }
+  },
+  "bbcHeadline": {
+    "generated_at": "2026-04-17T05:51:09.354703+00:00",
+    "source": {
+      "id": "bbc",
+      "name": "BBC",
+      "kind": "rss",
+      "status": "ok",
+      "source_url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/business/rss.xml",
+      "note": "BBC business headlines via official RSS. BBC terms require nearby credit and links back to BBC News."
+    },
+    "headline": {
+      "title": "Finance ministers and top bankers raise serious concerns about Mythos AI model",
+      "url": "https://www.bbc.com/news/articles/c2ev24yx4rmo?at_medium=RSS&at_campaign=rss",
+      "summary": "Experts say Mythos potentially has an unprecedented ability to identify and exploit cybersecurity weaknesses.",
+      "published_at": "2026-04-17T01:34:22+00:00"
+    },
+    "meta": {
+      "title": "BBC Headline Snapshot",
+      "description": "Saved lead story for local posting on the static website."
+    }
+  },
+  "foxHeadline": {
+    "generated_at": "2026-04-17T05:51:09.354703+00:00",
+    "source": {
+      "id": "fox",
+      "name": "Fox News",
+      "kind": "rss",
+      "status": "ok",
+      "source_url": "https://www.foxnews.com/about/rss",
+      "note": "Fox News headlines via official RSS. Fox terms require attribution and direct links to full articles."
+    },
+    "headline": {
+      "title": "Trump admin announces expansion of visa restriction policy in Western Hemisphere",
+      "url": "https://www.foxnews.com/politics/trump-admin-announces-expansion-visa-restriction-policy-western-hemisphere",
+      "summary": "The State Department said it imposed visa restrictions on 26 individuals under the expanded policy targeting those acting for U.S. adversaries.",
+      "published_at": "2026-04-17T02:31:32+00:00"
+    },
+    "meta": {
+      "title": "Fox News Headline Snapshot",
+      "description": "Saved lead story for local posting on the static website."
+    }
+  }
+};

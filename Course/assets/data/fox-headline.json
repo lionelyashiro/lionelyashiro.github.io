@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-04-17T05:51:09.354703+00:00",
+  "source": {
+    "id": "fox",
+    "name": "Fox News",
+    "kind": "rss",
+    "status": "ok",
+    "source_url": "https://www.foxnews.com/about/rss",
+    "note": "Fox News headlines via official RSS. Fox terms require attribution and direct links to full articles."
+  },
+  "headline": {
+    "title": "Trump admin announces expansion of visa restriction policy in Western Hemisphere",
+    "url": "https://www.foxnews.com/politics/trump-admin-announces-expansion-visa-restriction-policy-western-hemisphere",
+    "summary": "The State Department said it imposed visa restrictions on 26 individuals under the expanded policy targeting those acting for U.S. adversaries.",
+    "published_at": "2026-04-17T02:31:32+00:00"
+  },
+  "meta": {
+    "title": "Fox News Headline Snapshot",
+    "description": "Saved lead story for local posting on the static website."
+  }
+}

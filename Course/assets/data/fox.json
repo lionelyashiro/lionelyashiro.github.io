@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-04-17T05:51:09.354703+00:00",
+  "source": {
+    "id": "fox",
+    "name": "Fox News",
+    "kind": "rss",
+    "status": "ok",
+    "source_url": "https://www.foxnews.com/about/rss",
+    "note": "Fox News headlines via official RSS. Fox terms require attribution and direct links to full articles."
+  },
+  "items": [
+    {
+      "title": "Trump admin announces expansion of visa restriction policy in Western Hemisphere",
+      "url": "https://www.foxnews.com/politics/trump-admin-announces-expansion-visa-restriction-policy-western-hemisphere",
+      "summary": "The State Department said it imposed visa restrictions on 26 individuals under the expanded policy targeting those acting for U.S. adversaries.",
+      "published_at": "2026-04-17T02:31:32+00:00"
+    },
+    {
+      "title": "Singer D4vd arrested and held without bail in case tied to teen found dead in Tesla: Police",
+      "url": "https://www.foxnews.com/us/singer-d4vd-arrested-held-bail-case-tied-teen-found-dead-tesla-police",
+      "summary": "Singer D4vd, whose real name is David Burke, was arrested in connection with the murder of 14-year-old Celeste Rivas Hernandez in LA, LAPD says.",
+      "published_at": "2026-04-17T01:55:21+00:00"
+    },
+    {
+      "title": "EXCLUSIVE: NYC officials refuse ICE hold for illegal alien accused in arson that killed 4 and injured 7: DHS",
+      "url": "https://www.foxnews.com/us/exclusive-nyc-officials-refuse-ice-hold-illegal-alien-accused-arson-killed-4-injured-7-dhs",
+      "summary": "A Mexican national illegal alien accused of randomly setting a NYC apartment on fire that killed four could be released due to the city&apos;s sanctuary policies, DHS sa\u2026",
+      "published_at": "2026-04-17T01:50:23+00:00"
+    },
+    {
+      "title": "Former SMU cornerback Teddy Knox faces $2.88M judgment for crash linked to Rashee Rice's Lamborghini race",
+      "url": "https://www.foxnews.com/sports/former-smu-cornerback-teddy-knox-faces-288m-judgment-crash-tied-rashee-rices-lamborghini-race",
+      "summary": "Teddy Knox, who was racing Rashee Rice&apos;s Lamborghini in a 2024 Dallas crash, was ordered to pay $2.88 million in a default judgment lawsuit.",
+      "published_at": "2026-04-17T01:41:55+00:00"
+    },
+    {
+      "title": "Miami Catholic Charities loses $11M contract providing care for migrant children under Trump administration",
+      "url": "https://www.foxnews.com/media/miami-catholic-charities-loses-11m-contract-providing-care-migrant-children-under-trump-admin",
+      "summary": "The Trump administration canceled an $11 million Catholic Charities contract in Miami, citing a drop in illegal immigration and fewer unaccompanied minors.",
+      "published_at": "2026-04-17T01:30:45+00:00"
+    }
+  ],
+  "meta": {
+    "title": "Fox News Snapshot",
+    "description": "Saved Fox News stories for display on the local static website."
+  }
+}

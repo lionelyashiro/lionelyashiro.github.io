@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-04-17T05:51:09.354703+00:00",
+  "source": {
+    "id": "bbc",
+    "name": "BBC",
+    "kind": "rss",
+    "status": "ok",
+    "source_url": "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/business/rss.xml",
+    "note": "BBC business headlines via official RSS. BBC terms require nearby credit and links back to BBC News."
+  },
+  "headline": {
+    "title": "Finance ministers and top bankers raise serious concerns about Mythos AI model",
+    "url": "https://www.bbc.com/news/articles/c2ev24yx4rmo?at_medium=RSS&at_campaign=rss",
+    "summary": "Experts say Mythos potentially has an unprecedented ability to identify and exploit cybersecurity weaknesses.",
+    "published_at": "2026-04-17T01:34:22+00:00"
+  },
+  "meta": {
+    "title": "BBC Headline Snapshot",
+    "description": "Saved lead story for local posting on the static website."
+  }
+}
