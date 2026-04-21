@@ -3,31 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IIMT3642 | Managing and Mining the Big Data </title>
+  <title>Courses | Zhepeng (Lionel) Li</title>
   <style>
     :root {
-      --ink: #1f355e;
-      --ink-deep: #13294b;
-      --ink-soft: #354962;
+      --ink: #13294b;
+      --blue: #1f355e;
       --red: #c8102e;
+      --paper: #ffffff;
       --mist: #f4f6f8;
-      --panel: #ffffff;
-      --panel-alt: #f9fafb;
       --line: #d8e0ea;
       --text: #22344d;
       --muted: #607086;
-      --shadow: 0 10px 28px rgba(19, 41, 75, 0.08);
-      --radius-lg: 16px;
-      --radius-md: 12px;
-      --max: 1180px;
+      --shadow: 0 14px 34px rgba(19, 41, 75, 0.1);
+      --max: 1080px;
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -35,7 +27,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background:
-        linear-gradient(180deg, #f5f7fa 0, #f5f7fa 210px, #ffffff 210px, #ffffff 100%);
+        linear-gradient(180deg, #f5f7fa 0, #f5f7fa 260px, #ffffff 260px, #ffffff 100%);
     }
 
     a {
@@ -43,1165 +35,286 @@
       text-decoration: none;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     .shell {
       width: min(var(--max), calc(100% - 2rem));
       margin: 0 auto;
     }
 
-    .utility-bar {
-      background: var(--ink-deep);
-      color: rgba(255, 255, 255, 0.84);
-      font-size: 0.82rem;
+    .topbar {
+      background: var(--ink);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.86rem;
     }
 
-    .utility-inner {
+    .topbar .shell {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.5rem 0;
-    }
-
-    .utility-inner span:last-child {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(14px);
-      background: rgba(255, 255, 255, 0.94);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      min-width: 0;
-    }
-
-    .brand img {
-      width: 74px;
-      height: auto;
-      flex: 0 0 auto;
-    }
-
-    .brand-copy {
-      min-width: 0;
-    }
-
-    .brand-copy p,
-    .brand-copy strong {
-      margin: 0;
-    }
-
-    .brand-copy p {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .brand-copy strong {
-      display: block;
-      font-size: 1.02rem;
-      color: var(--ink-deep);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      justify-content: flex-end;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a {
-      padding-bottom: 0.18rem;
-      border-bottom: 2px solid transparent;
-      color: var(--ink-soft);
-      font-weight: 600;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      border-color: var(--red);
-      outline: none;
+      padding: 0.55rem 0;
     }
 
     .hero {
-      padding: 2.2rem 0 1.6rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
-      gap: 1.25rem;
-      align-items: stretch;
-    }
-
-    .hero-card,
-    .info-card,
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-lg);
+      padding: 3.4rem 0 2rem;
     }
 
     .hero-card {
       padding: 2.4rem;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(19, 41, 75, 0.98), rgba(31, 53, 94, 0.96));
-      color: #f9fbfd;
-    }
-
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto auto;
-      width: 180px;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 68%);
-      pointer-events: none;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(19, 41, 75, 0.98), rgba(31, 53, 94, 0.96));
+      color: #fff;
+      box-shadow: var(--shadow);
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.88);
-      font: 700 0.78rem/1 Arial, Helvetica, sans-serif;
-      letter-spacing: 0.08em;
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding-bottom: 0.28rem;
+      border-bottom: 2px solid var(--red);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      border: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     h1,
     h2,
-    h3 {
+    h3,
+    p {
       margin: 0;
-      color: var(--ink-deep);
     }
 
-    .hero-card h1 {
-      margin-top: 1.15rem;
-      font-size: clamp(2.2rem, 4.5vw, 4rem);
-      line-height: 1.02;
-      color: #fff;
+    h1 {
       max-width: 12ch;
       font-family: Georgia, "Times New Roman", serif;
-      font-weight: 700;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.02;
     }
 
     .hero-card p {
-      margin: 1.15rem 0 0;
       max-width: 64ch;
-      font-size: 1rem;
-      line-height: 1.75;
-      color: rgba(249, 251, 253, 0.86);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-top: 1.6rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.95rem 1.25rem;
-      border-radius: 6px;
-      border: 1px solid transparent;
-      font: 700 0.94rem/1 Arial, Helvetica, sans-serif;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-2px);
-      outline: none;
-    }
-
-    .btn-primary {
-      background: #fff;
-      color: var(--ink-deep);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border-color: rgba(255, 255, 255, 0.28);
-      color: #fff;
-    }
-
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.9rem;
-    }
-
-    .info-card {
-      padding: 1.3rem;
-      background: var(--panel-alt);
-    }
-
-    .info-card h2 {
-      font-size: 1.05rem;
-    }
-
-    .info-card p,
-    .info-card li,
-    .info-card dd {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    dl {
-      margin: 1rem 0 0;
-      display: grid;
-      gap: 0.7rem;
-    }
-
-    dt {
-      font-weight: 700;
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    dd {
-      margin: 0.18rem 0 0;
-    }
-
-    main section {
-      padding: 1rem 0 2.1rem;
-    }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .section-head p {
-      margin: 0.5rem 0 0;
-      max-width: 52ch;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
-    }
-
-    .cards-3,
-    .cards-2 {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .cards-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .cards-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .panel {
-      padding: 1.35rem;
-      background: var(--panel);
-    }
-
-    .panel h3 {
-      font-size: 1.18rem;
-      margin-bottom: 0.65rem;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    .panel p,
-    .panel li {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
+      margin-top: 1rem;
+      color: rgba(255, 255, 255, 0.84);
       line-height: 1.7;
     }
 
-    .digest-wrap {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 1rem;
+    .section-head {
+      margin: 1rem 0;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--line);
     }
 
-    .news-band {
-      padding: 1.35rem;
+    .section-head h2 {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+    }
+
+    .section-head p {
+      max-width: 62ch;
+      margin-top: 0.45rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding-bottom: 3rem;
+    }
+
+    .course-card {
+      display: grid;
+      gap: 1rem;
+      padding: 1.4rem;
       border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background:
-        linear-gradient(180deg, rgba(244, 247, 250, 0.92), rgba(255, 255, 255, 0.98));
+      border-radius: 16px;
+      background: var(--paper);
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+      transition: transform 0.18s ease, border-color 0.18s ease;
     }
 
-    .news-band::before {
+    .course-card::before {
       content: "";
       position: absolute;
       inset: 0 0 auto 0;
       height: 5px;
-      background: linear-gradient(90deg, var(--red), var(--ink-deep) 55%, #8aa0bd);
+      background: linear-gradient(90deg, var(--red), var(--blue));
     }
 
-    .news-band .section-head {
-      margin-bottom: 1.2rem;
-      padding-bottom: 0.9rem;
-      border-bottom: 1px solid rgba(31, 53, 94, 0.1);
+    .course-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(31, 53, 94, 0.26);
     }
 
-    .news-band .section-head h2 {
-      position: relative;
-      display: inline-block;
-      padding-right: 1.2rem;
-    }
-
-    .news-band .section-head h2::after {
-      content: "";
-      position: absolute;
-      left: calc(100% + 0.3rem);
-      top: 50%;
-      width: 34px;
-      height: 1px;
-      background: rgba(31, 53, 94, 0.25);
-    }
-
-    .digest-lead {
-      padding: 1.65rem;
-      background:
-        linear-gradient(180deg, #fefcf6 0%, #ffffff 100%);
-      border: 1px solid rgba(31, 53, 94, 0.08);
-      position: relative;
-    }
-
-    .digest-lead::before {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(200, 16, 46, 0.5), transparent);
-    }
-
-    .digest-kicker {
-      display: inline-block;
-      margin-bottom: 0.9rem;
-      padding-bottom: 0.28rem;
-      border-bottom: 2px solid var(--red);
-      color: var(--ink-deep);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .digest-lead h3,
-    .digest-brief h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--ink-deep);
-    }
-
-    .digest-lead h3 {
-      font-size: 2rem;
-      line-height: 1.08;
-      max-width: 15ch;
-      margin-bottom: 0.8rem;
-    }
-
-    .digest-meta {
-      margin-top: 1rem;
-      color: var(--muted);
-      font-size: 0.86rem;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    .digest-side {
-      display: grid;
-      gap: 0.9rem;
-    }
-
-    .digest-status {
-      margin-top: 0.4rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .digest-brief {
-      padding: 1.15rem 1.2rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--panel-alt);
-      position: relative;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .digest-brief::before {
-      content: "";
-      position: absolute;
-      left: 1.2rem;
-      top: 0;
-      width: 42px;
-      height: 3px;
-      background: var(--red);
-      border-radius: 999px;
-    }
-
-    .digest-brief:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 28px rgba(19, 41, 75, 0.08);
-      border-color: rgba(31, 53, 94, 0.2);
-    }
-
-    .digest-brief h3 {
-      margin-bottom: 0.45rem;
-      margin-top: 0.35rem;
-      font-size: 1.15rem;
-      line-height: 1.3;
-    }
-
-    .digest-brief p {
-      font-size: 0.95rem;
-    }
-
-    .digest-brief a,
-    .digest-lead a {
-      color: var(--ink-deep);
-    }
-
-    .digest-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-      align-items: stretch;
-    }
-
-    .source-card {
-      height: 100%;
-      padding: 1.2rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--panel-alt);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .source-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(19, 41, 75, 0.08);
-      border-color: rgba(31, 53, 94, 0.18);
-    }
-
-    .source-head {
+    .course-meta {
       display: flex;
-      justify-content: space-between;
-      gap: 0.75rem;
-      align-items: start;
-      margin-bottom: 0.9rem;
+      flex-wrap: wrap;
+      gap: 0.55rem;
     }
 
-    .source-head h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.2rem;
-      line-height: 1.15;
-    }
-
-    .source-status {
-      flex: 0 0 auto;
-      padding: 0.28rem 0.5rem;
+    .tag {
+      padding: 0.35rem 0.55rem;
       border-radius: 999px;
-      background: linear-gradient(180deg, #eef3f8, #e3ebf4);
-      color: var(--ink-soft);
-      font-size: 0.72rem;
+      background: var(--mist);
+      color: var(--blue);
+      font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
-    .source-card ul {
-      margin: 0;
-      padding-left: 1rem;
-      display: grid;
-      gap: 0.7rem;
-    }
-
-    .source-card li {
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .source-card li a {
-      color: var(--ink-deep);
-      font-weight: 700;
-    }
-
-    .source-note {
-      margin-top: 0.9rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.55;
-    }
-
-    .source-link {
-      display: inline-block;
-      margin-top: 0.8rem;
-      color: var(--ink-soft);
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .nyt-shell {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .headline-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .headline-card {
-      padding: 1.3rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 250, 0.96));
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .headline-card::after {
-      content: "";
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 4px;
-      background: linear-gradient(180deg, var(--red), var(--ink-deep));
-    }
-
-    .headline-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(19, 41, 75, 0.08);
-      border-color: rgba(31, 53, 94, 0.18);
-    }
-
-    .headline-card h3 {
-      margin-bottom: 0.6rem;
+    .course-card h3 {
+      color: var(--ink);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.36rem;
-      line-height: 1.2;
-      max-width: 18ch;
+      font-size: 1.45rem;
+      line-height: 1.22;
     }
 
-    .headline-card h3 a {
-      color: var(--ink-deep);
-    }
-
-    .headline-source {
-      margin-bottom: 0.8rem;
-      color: var(--ink-soft);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nyt-list {
-      display: grid;
-      gap: 0.9rem;
-    }
-
-    .nyt-item {
-      padding: 1.2rem 1.25rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 250, 0.96));
-      position: relative;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .nyt-item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 1.25rem;
-      width: 44px;
-      height: 3px;
-      background: var(--ink-deep);
-      border-radius: 999px;
-    }
-
-    .nyt-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(19, 41, 75, 0.08);
-      border-color: rgba(31, 53, 94, 0.18);
-    }
-
-    .nyt-item h3 {
-      margin-bottom: 0.5rem;
-      margin-top: 0.35rem;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.2rem;
-      line-height: 1.25;
-    }
-
-    .nyt-item h3 a {
-      color: var(--ink-deep);
-    }
-
-    .nyt-item p {
-      margin: 0;
+    .course-card p {
       color: var(--muted);
       line-height: 1.65;
     }
 
-    .nyt-meta {
-      margin-top: 0.65rem;
-      color: var(--ink-soft);
-      font-size: 0.88rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+    .course-link {
+      justify-self: start;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.92rem;
+      font-weight: 700;
     }
 
-    .module-list {
-      display: grid;
-      gap: 1rem;
+    .placeholder {
+      border-style: dashed;
+      box-shadow: none;
+      background: linear-gradient(180deg, #fbfcfd, #f6f8fb);
     }
 
-    .module {
-      display: grid;
-      grid-template-columns: 110px 1fr auto;
-      gap: 1rem;
-      align-items: center;
-      padding: 1rem 1.1rem;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--line);
-      background: var(--panel-alt);
-    }
-
-    .module-week {
-      font: 700 0.84rem/1.2 Arial, Helvetica, sans-serif;
-      color: var(--red);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .module strong {
-      display: block;
-      margin-bottom: 0.25rem;
-      color: var(--ink-deep);
-      font-size: 1.05rem;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    .module span {
-      display: block;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .module a {
-      font: 700 0.92rem/1 Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      padding: 0.8rem 1rem;
-      border-radius: 4px;
-      border: 1px solid var(--line);
-      white-space: nowrap;
-      background: #fff;
-    }
-
-    .module a:hover,
-    .module a:focus-visible {
-      border-color: var(--red);
-      outline: none;
-    }
-
-    .subsessions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 0.55rem;
-    }
-
-    .assessment {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: baseline;
-      padding: 0.9rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .assessment:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .assessment:first-child {
-      padding-top: 0.1rem;
-    }
-
-    .assessment strong {
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .assessment span {
-      color: var(--ink-deep);
-      font: 700 1rem/1 Arial, Helvetica, sans-serif;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 1rem;
+    .placeholder::before {
+      background: linear-gradient(90deg, #aab6c6, #d8e0ea);
     }
 
     .footer {
-      padding: 1rem 0 2.4rem;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.94rem;
-      border-top: 4px solid var(--ink-deep);
+      padding: 1.3rem 0 2.4rem;
+      border-top: 4px solid var(--ink);
       background: var(--mist);
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
-    .footer p {
-      margin: 0.25rem 0;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .digest-wrap,
-      .digest-grid,
-      .headline-grid,
-      .contact-grid,
-      .cards-3,
-      .cards-2 {
+    @media (max-width: 760px) {
+      .course-grid {
         grid-template-columns: 1fr;
       }
 
       .hero-card {
-        padding: 2.2rem;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 1.8rem;
       }
 
-      .nav-links {
-        justify-content: flex-start;
-      }
-
-      .module {
-        grid-template-columns: 1fr;
-        align-items: flex-start;
-      }
-
-      .hero-meta {
-        grid-template-columns: 1fr;
-      }
-
-      .section-head {
-        align-items: flex-start;
+      .topbar .shell {
         flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <div class="utility-bar">
-    <div class="shell utility-inner">
-      <span>The University of Hong Kong</span>
-      <span>Faculty of Business and Economics</span>
+  <div class="topbar">
+    <div class="shell">
+      <span>Zhepeng (Lionel) Li</span>
+      <span>Faculty of Business and Economics, The University of Hong Kong</span>
     </div>
   </div>
-  <header class="site-header">
-    <div class="shell nav">
-      <a class="brand" href="#top">
-        <img src="assets/hku-business-school-logo.png" alt="HKU Business School logo">
-        <div class="brand-copy">
-          <p>Faculty of Business &amp; Economics</p>
-          <strong>The University of Hong Kong</strong>
-        </div>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#overview">Overview</a>
-        <a href="#digest">Digest</a>
-        <a href="#modules">Modules</a>
-        <a href="#assessment">Assessment</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
-      <div class="shell hero-grid">
-        <article class="hero-card">
-          <div class="eyebrow">IIMT3642 Course Teaching Site</div>
-          <h1>Managing and Mining the Big Data</h1>
+      <div class="shell hero-card">
+        <span class="eyebrow">Teaching Portfolio</span>
+        <h1>Course Offerings</h1>
+        <p>
+          A collection of course websites, teaching materials, and weekly learning paths
+          for undergraduate and graduate teaching in BBA, MSBA, IMBA, MAIB, and PhD programs.
+        </p>
+      </div>
+    </section>
+
+    <section class="shell">
+      <div class="section-head">
+        <h2>Current Courses</h2>
+        <p>
+          Select a course below to view the course overview, weekly modules, lecture slides,
+          assessment structure, and live business digest materials.
+        </p>
+      </div>
+
+      <div class="course-grid">
+        <article class="course-card">
+          <div class="course-meta">
+            <span class="tag">Undergraduate</span>
+            <span class="tag">IIMT3642</span>
+            <span class="tag">Business Analytics</span>
+          </div>
+          <h3>Managing and Mining the Big Data</h3>
           <p>
-            A practical course website for HKU undergraduates to explore data preparation,
-            prediction, segmentation, recommendation, and network thinking through applied
-            business cases, visual explanations, and downloadable lecture materials.
+            A teaching site for data preparation, classification, association analysis,
+            clustering, recommendation systems, network analysis, and artificial neural networks.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#modules">Explore Weekly Modules</a>
-            <a class="btn btn-secondary" href="assets/Slides/S1_Overview.pdf">Open Course Overview</a>
-          </div>
+          <a class="course-link" href="IIMT3642/">Open Course Site</a>
         </article>
 
-        <div class="hero-meta">
-          <aside class="info-card">
-            <h2>Course Snapshot</h2>
-            <dl>
-              <div>
-                <dt>Audience</dt>
-                <dd>Year 2-3 undergraduates in business, economics, and related programmes</dd>
-              </div>
-              <div>
-                <dt>Format</dt>
-                <dd>Lectures, in-class discussion, lab demos, and case-based assignments</dd>
-              </div>
-              <div>
-                <dt>Focus</dt>
-                <dd>Turning data into managerial decisions with interpretable analytics tools</dd>
-              </div>
-            </dl>
-          </aside>
-
-          <aside class="info-card">
-            <h2>What Students Will Learn</h2>
-            <ul>
-              <li>Frame business problems as data questions.</li>
-              <li>Interpret classification, clustering, and recommendation methods.</li>
-              <li>Communicate evidence clearly to non-technical stakeholders.</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="overview">
-      <div class="shell">
-        <div class="section-head">
-          <div>
-            <h2>Course Experience</h2>
-            <p>
-              The site is organized for teaching: students can quickly see what the course covers,
-              how they will be assessed, and where to find each session deck without hunting through folders.
-            </p>
+        <article class="course-card placeholder">
+          <div class="course-meta">
+            <span class="tag">Coming Soon</span>
+            <span class="tag">MSBA 7026</span>
+            <span class="tag">MSBA</span>
           </div>
-        </div>
-
-        <div class="cards-3">
-          <article class="panel">
-            <h3>Concept to Application</h3>
-            <p>Each topic starts with a business decision context, then introduces the relevant analytic method and its managerial implications.</p>
-          </article>
-          <article class="panel">
-            <h3>Structured Weekly Rhythm</h3>
-            <p>Students can follow a simple rhythm of pre-class reading, lecture slides, worked examples, and follow-up discussion each week.</p>
-          </article>
-          <article class="panel">
-            <h3>Career Relevance</h3>
-            <p>The course language emphasizes consulting, product, finance, marketing, and operations use cases familiar to business students.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="digest">
-      <div class="shell news-band">
-        <div class="section-head">
-          <div>
-            <h2>Business Digest</h2>
-            <p>
-              Daily updates compiled from BBC and Fox News so students can connect analytics ideas to real business reporting and class discussion.
-            </p>
-          </div>
-        </div>
-
-        <div class="digest-wrap" id="digest-top">
-          <article class="panel digest-lead">
-            <span class="digest-kicker">Daily Highlights</span>
-            <h3 id="digest-lead-title">Loading today&rsquo;s lead story...</h3>
-            <p id="digest-lead-summary">
-              The digest will populate from the compiled source file after the refresh script runs.
-            </p>
-            <p class="digest-meta" id="digest-generated-at">Awaiting first refresh</p>
-          </article>
-
-          <div class="digest-side" id="digest-side">
-            <article class="digest-brief">
-              <h3>Refresh Workflow</h3>
-              <p>Run <code>python3 scripts/build_digest.py</code> to compile the latest headlines into the site.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="digest-grid" id="digest-grid">
-          <article class="source-card">
-            <div class="source-head">
-              <h3>Digest Sources</h3>
-              <span class="source-status">Setup</span>
-            </div>
-            <p class="source-note">The website will render one source card for each configured publisher after the digest JSON has been refreshed.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="modules">
-      <div class="shell">
-        <div class="section-head">
-          <div>
-            <h2>Weekly Modules</h2>
-            <p>
-              Lecture materials already available in the project are linked below as a teaching-ready course sequence.
-            </p>
-          </div>
-        </div>
-
-        <div class="panel module-list">
-          <div class="module">
-            <div class="module-week">Week 1</div>
-            <div>
-              <strong>Introduction to Business Analytics</strong>
-              <span>Course framing, business value of analytics, and how data-informed decisions differ from intuition-led choices.</span>
-            </div>
-            <a href="assets/Slides/S1_Overview.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 2</div>
-            <div>
-              <strong>Data Exploration</strong>
-              <span>Descriptive patterns, visual summaries, outlier spotting, and the first questions analysts should ask when meeting a new dataset.</span>
-            </div>
-            <a href="assets/Slides/S2_DataExploration.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 3</div>
-            <div>
-              <strong>Data Preparation</strong>
-              <span>Cleaning, transforming, and structuring raw information so downstream models can be interpreted and trusted.</span>
-            </div>
-            <a href="assets/Slides/S3_DataPreparation.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 4</div>
-            <div>
-              <strong>Classification with Decision Trees</strong>
-              <span>One session organized into three subsessions covering decision rules, model refinement, and practical interpretation for business decisions.</span>
-            </div>
-            <div class="subsessions" aria-label="Decision tree subsessions">
-              <a href="assets/Slides/S4_Classification_DT1.pdf">Subsession 1</a>
-              <a href="assets/Slides/S4_Classification_DT2.pdf">Subsession 2</a>
-              <a href="assets/Slides/S4_Classification_DT3.pdf">Subsession 3</a>
-            </div>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 5</div>
-            <div>
-              <strong>Naive Bayes, Logistic Regression, and SVM</strong>
-              <span>Comparing classification families and understanding when different models are appropriate for different decision settings.</span>
-            </div>
-            <a href="assets/Slides/S5_Classification_NB_LR.pdf">NB &amp; LR</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 6</div>
-            <div>
-              <strong>Support Vector Machines</strong>
-              <span>Margins, boundaries, and how to explain powerful but less intuitive classifiers in a business-friendly way.</span>
-            </div>
-            <a href="assets/Slides/S5_Classification_SVM.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 7</div>
-            <div>
-              <strong>Association Analysis</strong>
-              <span>Basket patterns, co-occurrence logic, and the managerial uses of rules in retail, digital commerce, and service design.</span>
-            </div>
-            <a href="assets/Slides/S6_Association.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 8</div>
-            <div>
-              <strong>Clustering</strong>
-              <span>Segmentation, similarity, and how to derive strategically meaningful customer or product groupings from data.</span>
-            </div>
-            <a href="assets/Slides/S7_Clustering.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 9</div>
-            <div>
-              <strong>Recommendation Systems</strong>
-              <span>Personalization, filtering, and the opportunities and limits of recommending products, content, and experiences.</span>
-            </div>
-            <a href="assets/Slides/S8_Recommendation.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 10</div>
-            <div>
-              <strong>Network Analysis</strong>
-              <span>Connections among people, products, or firms, and how network structure can reveal influence, communities, and diffusion.</span>
-            </div>
-            <a href="assets/Slides/S9_NetworkAnalysis.pdf">View Slides</a>
-          </div>
-
-          <div class="module">
-            <div class="module-week">Week 11</div>
-            <div>
-              <strong>Artificial Neural Networks</strong>
-              <span>Neural network foundations, business applications, and how layered models can support prediction tasks when relationships are complex.</span>
-            </div>
-            <a href="assets/Slides/S10_ArtificialNN.pdf">View Slides</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="assessment">
-      <div class="shell cards-2">
-        <article class="panel">
-          <div class="section-head">
-            <div>
-              <h2>Assessment</h2>
-              <p>
-                A balanced structure for undergraduate learning, with space for both quantitative practice and business communication.
-              </p>
-            </div>
-          </div>
-          <div class="assessment">
-            <strong>Class Participation and Polling</strong>
-            <span>10%</span>
-          </div>
-          <div class="assessment">
-            <strong>Individual Analytics Reflection</strong>
-            <span>15%</span>
-          </div>
-          <div class="assessment">
-            <strong>Midterm Quiz</strong>
-            <span>25%</span>
-          </div>
-          <div class="assessment">
-            <strong>Group Business Case Project</strong>
-            <span>30%</span>
-          </div>
-          <div class="assessment">
-            <strong>Final Applied Analysis Assignment</strong>
-            <span>20%</span>
-          </div>
+          <h3>Big Data Analytics on the Cloud</h3>
+          <p>
+            A graduate-level course for students in the MSBA programme, focusing on scalable analytics,
+            cloud-based data infrastructure, and applied big data workflows.
+          </p>
         </article>
 
-        <article class="panel" id="resources">
-          <div class="section-head">
-            <div>
-              <h2>Learning Resources</h2>
-              <p>Use these sections to keep expectations clear and reduce repeated student questions during the term.</p>
-            </div>
+        <article class="course-card placeholder">
+          <div class="course-meta">
+            <span class="tag">Coming Soon</span>
+            <span class="tag">IMBA 6068</span>
+            <span class="tag">IMBA</span>
           </div>
-          <div class="assessment">
-            <strong>Lecture decks</strong>
-            <span>PDF</span>
-          </div>
-          <div class="assessment">
-            <strong>Weekly business cases</strong>
-            <span>Canvas</span>
-          </div>
-          <div class="assessment">
-            <strong>Consultation hours</strong>
-            <span>In person</span>
-          </div>
-          <div class="assessment">
-            <strong>Project templates</strong>
-            <span>Download</span>
-          </div>
-          <div class="assessment">
-            <strong>Revision guide</strong>
-            <span>Week 11</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="shell contact-grid">
-        <article class="panel">
-          <div class="section-head">
-            <div>
-              <h2>Teaching Team</h2>
-              <p>
-                The page is ready for real course details to be dropped in before publication on GitHub Pages, Moodle, or an internal HKU hosting setup.
-              </p>
-            </div>
-          </div>
-          <p><strong>Instructor:</strong> Dr. Zhepeng (Lionel) Li</p>
-          <p><strong>Email:</strong> zpli@hku.hk</p>
-          <p><strong>Office Hours:</strong> TBD by appointment</p>
-          <p><strong>Venue:</strong> KK Leung Building, Main Campus</p>
+          <h3>Knowledge and Innovation Management</h3>
+          <p>
+            A graduate-level course for students in the IMBA programme, covering how organizations
+            create, share, protect, and transform knowledge into innovation outcomes.
+          </p>
         </article>
 
-        <article class="panel">
-          <div class="section-head">
-            <div>
-              <h2>Site Notes</h2>
-              <p>
-                This prototype is designed to feel like a finished course microsite while staying editable as a single HTML file.
-              </p>
-            </div>
+        <article class="course-card placeholder">
+          <div class="course-meta">
+            <span class="tag">Coming Soon</span>
+            <span class="tag">MAIB 7001</span>
+            <span class="tag">MAIB</span>
           </div>
-          <p>Update the title, instructor details, and assessment breakdown to match the actual course outline.</p>
-          <p>The lecture links currently point to the slide PDFs already included in the project assets.</p>
-          <p>The layout is responsive and intended to work cleanly on laptop and mobile screens.</p>
+          <h3>AI for Businesses</h3>
+          <p>
+            A graduate-level course for students in the MAIB programme, introducing practical AI
+            capabilities, managerial implications, and business transformation opportunities.
+          </p>
+        </article>
+
+        <article class="course-card placeholder">
+          <div class="course-meta">
+            <span class="tag">Coming Soon</span>
+            <span class="tag">IIM 6019</span>
+            <span class="tag">PhD</span>
+          </div>
+          <h3>Machine Learning in Business Research</h3>
+          <p>
+            A graduate-level course for PhD students, emphasizing machine learning methods,
+            research design, and rigorous applications in business research contexts.
+          </p>
         </article>
       </div>
     </section>
@@ -1209,171 +322,8 @@
 
   <footer class="footer">
     <div class="shell">
-      <p>Faculty of Business &amp; Economics, The University of Hong Kong</p>
-      <p>Prototype teaching website for undergraduate course delivery and communication.</p>
+      <p>Course index for Zhepeng (Lionel) Li. Built as a static page within the Hexo website.</p>
     </div>
   </footer>
-  <script src="assets/data/site-data.js"></script>
-  <script>
-    const digestGeneratedAt = document.getElementById("digest-generated-at");
-    const digestLeadTitle = document.getElementById("digest-lead-title");
-    const digestLeadSummary = document.getElementById("digest-lead-summary");
-    const digestSide = document.getElementById("digest-side");
-    const digestGrid = document.getElementById("digest-grid");
-    const siteData = window.__SITE_DATA__ || {};
-
-    const statusLabel = (status) => {
-      const lookup = {
-        ok: "Live",
-        needs_config: "Setup",
-        needs_refresh: "Refresh",
-        error: "Error"
-      };
-      return lookup[status] || "Info";
-    };
-
-    const formatDate = (value) => {
-      if (!value) return "Date unavailable";
-      const date = new Date(value);
-      if (Number.isNaN(date.getTime())) return "Date unavailable";
-      return new Intl.DateTimeFormat("en-HK", {
-        dateStyle: "medium",
-        timeStyle: "short"
-      }).format(date);
-    };
-
-    const renderLead = (lead, generatedAt) => {
-      if (!lead) {
-        digestLeadTitle.textContent = "Digest data is not available yet";
-        digestLeadSummary.textContent = "Run the digest build script to generate the latest stories for this page.";
-        digestGeneratedAt.textContent = "Awaiting refresh";
-        return;
-      }
-
-      const leadTitle = document.createElement("a");
-      leadTitle.href = lead.url || lead.source_url || "#";
-      leadTitle.target = "_blank";
-      leadTitle.rel = "noreferrer";
-      leadTitle.textContent = lead.title || "Lead story";
-      digestLeadTitle.replaceChildren(leadTitle);
-      digestLeadSummary.textContent = lead.summary || "No summary available.";
-      digestGeneratedAt.textContent =
-        `Updated ${formatDate(generatedAt)} | Lead source: ${lead.source_name || "Unknown"}`;
-    };
-
-    const renderHighlights = (sources) => {
-      digestSide.replaceChildren();
-      const cards = [];
-
-      sources.forEach((source) => {
-        if (source.items && source.items.length > 0) {
-          source.items.slice(0, 1).forEach((item) => {
-            const card = document.createElement("article");
-            card.className = "digest-brief";
-            const heading = document.createElement("h3");
-            const link = document.createElement("a");
-            link.href = item.url;
-            link.target = "_blank";
-            link.rel = "noreferrer";
-            link.textContent = `${source.name}: ${item.title}`;
-            heading.appendChild(link);
-            const body = document.createElement("p");
-            body.textContent = item.summary || "No summary available.";
-            card.append(heading, body);
-            cards.push(card);
-          });
-        } else {
-          const card = document.createElement("article");
-          card.className = "digest-brief";
-          const heading = document.createElement("h3");
-          heading.textContent = source.name;
-          const body = document.createElement("p");
-          body.textContent = source.note || "This source is waiting for configuration.";
-          card.append(heading, body);
-          cards.push(card);
-        }
-      });
-
-      cards.slice(0, 3).forEach((card) => digestSide.appendChild(card));
-    };
-
-    const renderSources = (sources) => {
-      digestGrid.replaceChildren();
-
-      sources.forEach((source) => {
-        const card = document.createElement("article");
-        card.className = "source-card";
-
-        const head = document.createElement("div");
-        head.className = "source-head";
-
-        const title = document.createElement("h3");
-        title.textContent = source.name;
-
-        const badge = document.createElement("span");
-        badge.className = "source-status";
-        badge.textContent = statusLabel(source.status);
-
-        head.append(title, badge);
-        card.appendChild(head);
-
-        if (source.items && source.items.length > 0) {
-          const list = document.createElement("ul");
-          source.items.slice(0, 4).forEach((item) => {
-            const li = document.createElement("li");
-            const link = document.createElement("a");
-            link.href = item.url;
-            link.target = "_blank";
-            link.rel = "noreferrer";
-            link.textContent = item.title;
-            li.appendChild(link);
-            list.appendChild(li);
-          });
-          card.appendChild(list);
-        }
-
-        const note = document.createElement("p");
-        note.className = "source-note";
-        note.textContent = source.note || "No additional note.";
-        card.appendChild(note);
-
-        if (source.source_url) {
-          const link = document.createElement("a");
-          link.className = "source-link";
-          link.href = source.source_url;
-          link.target = "_blank";
-          link.rel = "noreferrer";
-          link.textContent = "Open source";
-          card.appendChild(link);
-        }
-
-        digestGrid.appendChild(card);
-      });
-    };
-
-    const loadJson = (url, embeddedValue) => {
-      if (embeddedValue) {
-        return Promise.resolve(embeddedValue);
-      }
-      return fetch(url).then((response) => {
-        if (!response.ok) {
-          throw new Error(`${url} fetch failed with status ${response.status}`);
-        }
-        return response.json();
-      });
-    };
-
-    loadJson("assets/data/digest.json", siteData.digest)
-      .then((data) => {
-        renderLead(data.lead, data.generated_at);
-        renderHighlights(data.sources || []);
-        renderSources(data.sources || []);
-      })
-      .catch((error) => {
-        digestLeadTitle.textContent = "Unable to load the digest";
-        digestLeadSummary.textContent = error.message;
-        digestGeneratedAt.textContent = "Check assets/data/digest.json";
-      });
-  </script>
 </body>
 </html>
