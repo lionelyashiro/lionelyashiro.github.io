@@ -1,329 +1,262 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Courses | Zhepeng (Lionel) Li</title>
-  <style>
-    :root {
-      --ink: #13294b;
-      --blue: #1f355e;
-      --red: #c8102e;
-      --paper: #ffffff;
-      --mist: #f4f6f8;
-      --line: #d8e0ea;
-      --text: #22344d;
-      --muted: #607086;
-      --shadow: 0 14px 34px rgba(19, 41, 75, 0.1);
-      --max: 1080px;
-    }
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>LIONEL</title><meta name="author" content="Zhepeng (Lionel) Li"><link rel="shortcut icon" href="/img/avatar.jpg"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
-    * {
-      box-sizing: border-box;
-    }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">LIONEL</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/Publications"> Publications</a></li><li class="menus_item"><a class="site-page" href="/FundAward"> Fund &amp; Impact</a></li><li class="menus_item"><a class="site-page" href="/Service"> Service</a></li><li class="menus_item"><a class="site-page" href="/Course"> Course</a></li><li class="menus_item"><a class="site-page" href="/About"> About</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/img/SideHead2.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar"></div><div class="author-discrip"><h3>Zhepeng (Lionel) Li</h3><p class="author-bio">Associate Professor in IIM, Faculty of Business and Economics, The University of Hong Kong</p></div><div class="author-links"><button class="btn m-social-links">Links</button><ul class="social-links"><li><a class="e-social-link" href="https://scholar.google.com/citations?user=P7J_s3IAAAAJ&amp;hl=en" target="_blank"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span></a></li><li><a class="e-social-link" href="https://github.com/lionelyashiro?tab=repositories" target="_blank"><i class="fab fa-github" aria-hidden="true"></i><span>Every Wall Is A Door</span></a></li><li><a class="e-social-link" href="/" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i><span>zpli[AT]hku[DOT]hk</span></a></li></ul></div></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><h2 class="page-title">Course</h2><article><style>
+.course-index {
+  color: #22344d;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        linear-gradient(180deg, #f5f7fa 0, #f5f7fa 260px, #ffffff 260px, #ffffff 100%);
-    }
+.course-index a {
+  text-decoration: none;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+.course-index .hero {
+  padding: 0.6rem 0 2rem;
+}
 
-    .shell {
-      width: min(var(--max), calc(100% - 2rem));
-      margin: 0 auto;
-    }
+.course-index .hero-card {
+  padding: 2.4rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(19, 41, 75, 0.98), rgba(31, 53, 94, 0.96));
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(19, 41, 75, 0.1);
+}
 
-    .topbar {
-      background: var(--ink);
-      color: rgba(255, 255, 255, 0.86);
-      font-size: 0.86rem;
-    }
+.course-index .eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding-bottom: 0.28rem;
+  border-bottom: 2px solid #c8102e;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
-    .topbar .shell {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.55rem 0;
-    }
+.course-index h1,
+.course-index h2,
+.course-index h3,
+.course-index p {
+  margin: 0;
+}
 
-    .hero {
-      padding: 3.4rem 0 2rem;
-    }
+.course-index h1 {
+  max-width: 12ch;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.02;
+}
 
-    .hero-card {
-      padding: 2.4rem;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(19, 41, 75, 0.98), rgba(31, 53, 94, 0.96));
-      color: #fff;
-      box-shadow: var(--shadow);
-    }
+.course-index .hero-card p {
+  max-width: 64ch;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.7;
+}
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding-bottom: 0.28rem;
-      border-bottom: 2px solid var(--red);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
+.course-index .section-head {
+  margin: 1rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #d8e0ea;
+}
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 0;
-    }
+.course-index .section-head h2 {
+  color: #13294b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+}
 
-    h1 {
-      max-width: 12ch;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.3rem, 5vw, 4rem);
-      line-height: 1.02;
-    }
+.course-index .section-head p {
+  max-width: 62ch;
+  margin-top: 0.45rem;
+  color: #607086;
+  line-height: 1.65;
+}
 
-    .hero-card p {
-      max-width: 64ch;
-      margin-top: 1rem;
-      color: rgba(255, 255, 255, 0.84);
-      line-height: 1.7;
-    }
+.course-index .course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
 
-    .section-head {
-      margin: 1rem 0;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid var(--line);
-    }
+.course-index .course-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.4rem;
+  border: 1px solid #d8e0ea;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(19, 41, 75, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
 
-    .section-head h2 {
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.8rem;
-    }
+.course-index .course-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, #c8102e, #1f355e);
+}
 
-    .section-head p {
-      max-width: 62ch;
-      margin-top: 0.45rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
+.course-index .course-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(31, 53, 94, 0.26);
+}
 
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      padding-bottom: 3rem;
-    }
+.course-index .course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
 
-    .course-card {
-      display: grid;
-      gap: 1rem;
-      padding: 1.4rem;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--paper);
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.18s ease, border-color 0.18s ease;
-    }
+.course-index .tag {
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  background: #f4f6f8;
+  color: #1f355e;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
-    .course-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--red), var(--blue));
-    }
+.course-index .course-card h3 {
+  color: #13294b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  line-height: 1.22;
+}
 
-    .course-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(31, 53, 94, 0.26);
-    }
+.course-index .course-card p {
+  color: #607086;
+  line-height: 1.65;
+}
 
-    .course-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-    }
+.course-index .course-link {
+  justify-self: start;
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  background: #13294b;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
 
-    .tag {
-      padding: 0.35rem 0.55rem;
-      border-radius: 999px;
-      background: var(--mist);
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
+.course-index .placeholder {
+  border-style: dashed;
+  box-shadow: none;
+  background: linear-gradient(180deg, #fbfcfd, #f6f8fb);
+}
 
-    .course-card h3 {
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.45rem;
-      line-height: 1.22;
-    }
+.course-index .placeholder::before {
+  background: linear-gradient(90deg, #aab6c6, #d8e0ea);
+}
 
-    .course-card p {
-      color: var(--muted);
-      line-height: 1.65;
-    }
+@media (max-width: 760px) {
+  .course-index .course-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .course-link {
-      justify-self: start;
-      padding: 0.85rem 1rem;
-      border-radius: 6px;
-      background: var(--ink);
-      color: #fff;
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
+  .course-index .hero-card {
+    padding: 1.8rem;
+  }
+}
+</style>
 
-    .placeholder {
-      border-style: dashed;
-      box-shadow: none;
-      background: linear-gradient(180deg, #fbfcfd, #f6f8fb);
-    }
-
-    .placeholder::before {
-      background: linear-gradient(90deg, #aab6c6, #d8e0ea);
-    }
-
-    .footer {
-      padding: 1.3rem 0 2.4rem;
-      border-top: 4px solid var(--ink);
-      background: var(--mist);
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 760px) {
-      .course-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        padding: 1.8rem;
-      }
-
-      .topbar .shell {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="topbar">
-    <div class="shell">
-      <span>Zhepeng (Lionel) Li</span>
-      <span>Faculty of Business and Economics, The University of Hong Kong</span>
+<div class="course-index">
+  <section class="hero">
+    <div class="hero-card">
+      <span class="eyebrow">Teaching Portfolio</span>
+      <h1>Course Offerings</h1>
+      <p>
+        A collection of course websites, teaching materials, and weekly learning paths
+        for undergraduate and graduate teaching in BBA, MSBA, IMBA, MAIB, and PhD programs.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <main>
-    <section class="hero">
-      <div class="shell hero-card">
-        <span class="eyebrow">Teaching Portfolio</span>
-        <h1>Course Offerings</h1>
-        <p>
-          A collection of course websites, teaching materials, and weekly learning paths
-          for undergraduate and graduate teaching in BBA, MSBA, IMBA, MAIB, and PhD programs.
-        </p>
-      </div>
-    </section>
-
-    <section class="shell">
-      <div class="section-head">
-        <h2>Current Courses</h2>
-        <p>
-          Select a course below to view the course overview, weekly modules, lecture slides,
-          assessment structure, and live business digest materials.
-        </p>
-      </div>
-
-      <div class="course-grid">
-        <article class="course-card">
-          <div class="course-meta">
-            <span class="tag">Undergraduate</span>
-            <span class="tag">IIMT3642</span>
-            <span class="tag">BBA</span>
-          </div>
-          <h3>Managing and Mining the Big Data</h3>
-          <p>
-            A teaching site for data preparation, classification, association analysis,
-            clustering, recommendation systems, network analysis, and artificial neural networks.
-          </p>
-          <a class="course-link" href="IIMT3642/">Open Course Site</a>
-        </article>
-
-        <article class="course-card placeholder">
-          <div class="course-meta">
-            <span class="tag">Coming Soon</span>
-            <span class="tag">MSBA 7026</span>
-            <span class="tag">MSBA</span>
-          </div>
-          <h3>Big Data Analytics on the Cloud</h3>
-          <p>
-            A graduate-level course for students in the MSBA programme, focusing on scalable analytics,
-            cloud-based data infrastructure, and applied big data workflows.
-          </p>
-        </article>
-
-        <article class="course-card placeholder">
-          <div class="course-meta">
-            <span class="tag">Coming Soon</span>
-            <span class="tag">IMBA 6068</span>
-            <span class="tag">IMBA</span>
-          </div>
-          <h3>Knowledge and Innovation Management</h3>
-          <p>
-            A graduate-level course for students in the IMBA programme, covering how organizations
-            create, share, protect, and transform knowledge into innovation outcomes.
-          </p>
-        </article>
-
-        <article class="course-card placeholder">
-          <div class="course-meta">
-            <span class="tag">Coming Soon</span>
-            <span class="tag">MAIB 7001</span>
-            <span class="tag">MAIB</span>
-          </div>
-          <h3>AI for Businesses</h3>
-          <p>
-            A graduate-level course for students in the MAIB programme, introducing practical AI
-            capabilities, managerial implications, and business transformation opportunities.
-          </p>
-        </article>
-
-        <article class="course-card placeholder">
-          <div class="course-meta">
-            <span class="tag">Coming Soon</span>
-            <span class="tag">IIM 6019</span>
-            <span class="tag">PhD</span>
-          </div>
-          <h3>Machine Learning in Business Research</h3>
-          <p>
-            A graduate-level course for PhD students, emphasizing machine learning methods,
-            research design, and rigorous applications in business research contexts.
-          </p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="shell">
-      <p>Course index for Zhepeng (Lionel) Li. Built as a static page within the Hexo website.</p>
+  <section>
+    <div class="section-head">
+      <h2>Current Courses</h2>
+      <p>
+        Select a course below to view the course overview, weekly modules, lecture slides,
+        assessment structure, and live business digest materials.
+      </p>
     </div>
-  </footer>
-</body>
-</html>
+
+<pre><code>&lt;div class=&quot;course-grid&quot;&gt;
+  &lt;article class=&quot;course-card&quot;&gt;
+    &lt;div class=&quot;course-meta&quot;&gt;
+      &lt;span class=&quot;tag&quot;&gt;Undergraduate&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;IIMT3642&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;Business Analytics&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;Managing and Mining the Big Data&lt;/h3&gt;
+    &lt;p&gt;
+      A teaching site for data preparation, classification, association analysis,
+      clustering, recommendation systems, network analysis, and artificial neural networks.
+    &lt;/p&gt;
+    &lt;a class=&quot;course-link&quot; href=&quot;/Course/IIMT3642/&quot;&gt;Open Course Site&lt;/a&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&quot;course-card placeholder&quot;&gt;
+    &lt;div class=&quot;course-meta&quot;&gt;
+      &lt;span class=&quot;tag&quot;&gt;Coming Soon&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;MSBA 7026&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;MSBA&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;Big Data Analytics on the Cloud&lt;/h3&gt;
+    &lt;p&gt;
+      A graduate-level course for students in the MSBA programme, focusing on scalable analytics,
+      cloud-based data infrastructure, and applied big data workflows.
+    &lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&quot;course-card placeholder&quot;&gt;
+    &lt;div class=&quot;course-meta&quot;&gt;
+      &lt;span class=&quot;tag&quot;&gt;Coming Soon&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;IMBA 6068&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;IMBA&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;Knowledge and Innovation Management&lt;/h3&gt;
+    &lt;p&gt;
+      A graduate-level course for students in the IMBA programme, covering how organizations
+      create, share, protect, and transform knowledge into innovation outcomes.
+    &lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&quot;course-card placeholder&quot;&gt;
+    &lt;div class=&quot;course-meta&quot;&gt;
+      &lt;span class=&quot;tag&quot;&gt;Coming Soon&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;MAIB 7001&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;MAIB&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;AI for Businesses&lt;/h3&gt;
+    &lt;p&gt;
+      A graduate-level course for students in the MAIB programme, introducing practical AI
+      capabilities, managerial implications, and business transformation opportunities.
+    &lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&quot;course-card placeholder&quot;&gt;
+    &lt;div class=&quot;course-meta&quot;&gt;
+      &lt;span class=&quot;tag&quot;&gt;Coming Soon&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;IIM 6019&lt;/span&gt;
+      &lt;span class=&quot;tag&quot;&gt;PhD&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;Machine Learning in Business Research&lt;/h3&gt;
+    &lt;p&gt;
+      A graduate-level course for PhD students, emphasizing machine learning methods,
+      research design, and rigorous applications in business research contexts.
+    &lt;/p&gt;
+  &lt;/article&gt;
+&lt;/div&gt;
+</code></pre>
+  </section>
+</div>
+</article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/Publications"> Publications</a></li><li class="nav_item"><a class="nav-page" href="/FundAward"> Fund &amp; Impact</a></li><li class="nav_item"><a class="nav-page" href="/Service"> Service</a></li><li class="nav_item"><a class="nav-page" href="/Course"> Course</a></li><li class="nav_item"><a class="nav-page" href="/About"> About</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2021 - 2026 by Zhepeng (Lionel) Li</div><div class="theme-info">Powered by <a target="_blank" href="https://hexo.io" rel="nofollow noopener">Hexo</a> & <a target="_blank" href="https://github.com/PhosphorW/hexo-theme-academia" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html>
